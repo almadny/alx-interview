@@ -1,1 +1,2 @@
-Alx Interview Tasks
+alx-interview
+Interview Practice Tasks
