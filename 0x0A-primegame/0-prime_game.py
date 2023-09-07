@@ -13,9 +13,12 @@ def isWinner(x, nums):
     p2_wins = 0
     p1 = 'Maria'
     p2 = 'Ben'
-
-    for i in nums:
+    rounds = 0
+    # for i in nums:
+    while rounds < x:
+        i = nums[rounds]
         no_prime = 0
+
         for j in range(1, i + 1):
             if is_prime(j):
                 no_prime = no_prime + 1
@@ -24,6 +27,9 @@ def isWinner(x, nums):
             p2_wins = p2_wins + 1
         else:
             p1_wins = p1_wins + 1
+
+        rounds = rounds + 1
+
     if p1_wins == p2_wins:
         return None
     elif p1_wins > p2_wins:
